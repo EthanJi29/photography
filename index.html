@@ -1,32 +1,30 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
 
+<html class="scroll-smooth" lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ji Yishen - Portfolio</title>
-  <meta name="description"
-    content="Hello there, I'm Ji Yishen – an intrepid explorer through the lens, on a relentless quest to capture the world's boundless wonders. Join me in unraveling the extraordinary through my lens as I embark on a visual journey like no other.">
-  <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="dist/assets/favicon.ico" />
-  <link rel="stylesheet" href="dist/output.css" />
-  <link rel="stylesheet" href="styles.css" />
-  <!-- Alpine.js -->
-  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-  <!-- Start - Fonts -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Signika:wght@400;700&display=swap" rel="stylesheet">
-  <!-- End - Fonts -->
-  <!-- Start - Fancybox Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
-  <script src="https://code.jquery.com/jquery-3.6.3.min.js"
-    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
-  <!-- End - Fancybox Scripts -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ji Yishen - Portfolio</title>
+<meta content="Hello there, I'm Ji Yishen – an intrepid explorer through the lens, on a relentless quest to capture the world's boundless wonders. Join me in unraveling the extraordinary through my lens as I embark on a visual journey like no other." name="description"/>
+<!-- Favicon -->
+<link href="dist/assets/favicon.ico" rel="icon" type="image/x-icon"/>
+<link href="dist/output.css" rel="stylesheet"/>
+<link href="styles.css" rel="stylesheet"/>
+<!-- Alpine.js -->
+<script defer="" src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<!-- Start - Fonts -->
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Signika:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<!-- End - Fonts -->
+<!-- Start - Fancybox Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" rel="stylesheet"/>
+<script crossorigin="anonymous" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+<!-- End - Fancybox Scripts -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
     tailwind.config = {
       content: ["./dist/*.{html,js}"],
       theme: {
@@ -42,301 +40,82 @@
     }
   </script>
 </head>
-
-<body
-  class="dark:bg-black bg-white h-screen text-black dark:text-white px-5 md:px-20 opacity-0 animate-fade-in transition duration-500">
-  <!-- Navbar -->
-  <header class="flex w-full overflow-hidden pt-10 pb-1">
-    <!-- Navbar -->
-    <nav id="nav" x-data="{ open: false }" role="navigation" class="w-full">
-      <div class="container mx-auto flex flex-wrap items-center md:flex-no-wrap">
-        <div class="mr-4 md:mr-8">
-          <a href="index.html" class="text-2xl font-signika font-bold">Ji Yishen</a>
-        </div>
-        <div class="ml-auto md:hidden flex items-center justify-start">
-          <button onclick="menuToggle()" @click="open = !open"
-            class="tap-highlight-transparent text-black dark:text-white w-5 h-5 relative focus:outline-none"
-            @click="open = !open">
-            <span class="sr-only">Open main menu</span>
-            <div class="block w-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
-              <span aria-hidden="true"
-                class="block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out"
-                :class="{'rotate-45': open,' -translate-y-1.5': !open }"></span>
-              <span aria-hidden="true"
-                class="block absolute  h-0.5 w-5 bg-current   transform transition duration-500 ease-in-out"
-                :class="{'opacity-0': open } "></span>
-              <span aria-hidden="true"
-                class="block absolute h-0.5 w-5 bg-current transform  transition duration-500 ease-in-out"
-                :class="{'-rotate-45': open, ' translate-y-1.5': !open}"></span>
-            </div>
-          </button>
-        </div>
-        <div id="menu"
-          class="w-full h-0 transition-all ease-out duration-500 md:transition-none md:w-auto md:flex-grow md:flex md:items-center">
-          <ul id="ulMenu"
-            class="flex flex-col duration-300 ease-out md:space-x-5 sm:transition-none mt-5 md:flex-row md:items-center md:ml-auto md:mt-0 md:pt-0 md:border-0">
-            <li class="group transition duration-300">
-              <a href="index.html" class="font-signika text-2xl tap-highlight-transparent">PORTFOLIO
+<!-- ====================================================================================================================== -->
+<body class="dark:bg-black bg-white h-screen text-black dark:text-white px-5 md:px-20 opacity-0 animate-fade-in transition duration-500">
+<!-- Navbar -->
+<header class="flex w-full overflow-hidden pt-10 pb-1">
+<!-- Navbar -->
+<nav class="w-full" id="nav" role="navigation" x-data="{ open: false }">
+<div class="container mx-auto flex flex-wrap items-center md:flex-no-wrap">
+<div class="mr-4 md:mr-8">
+<a class="text-2xl font-signika font-bold" href="index.html">Ji Yishen</a>
+</div>
+<div class="ml-auto md:hidden flex items-center justify-start">
+<button @click="open = !open" class="tap-highlight-transparent text-black dark:text-white w-5 h-5 relative focus:outline-none" onclick="menuToggle()">
+<span class="sr-only">Open main menu</span>
+<div class="block w-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+<span :class="{'rotate-45': open,' -translate-y-1.5': !open }" aria-hidden="true" class="block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out"></span>
+<span :class="{'opacity-0': open } " aria-hidden="true" class="block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out"></span>
+<span :class="{'-rotate-45': open, ' translate-y-1.5': !open}" aria-hidden="true" class="block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out"></span>
+</div>
+</button>
+</div>
+<div class="w-full h-0 transition-all ease-out duration-500 md:transition-none md:w-auto md:flex-grow md:flex md:items-center" id="menu">
+<ul class="flex flex-col duration-300 ease-out md:space-x-5 sm:transition-none mt-5 md:flex-row md:items-center md:ml-auto md:mt-0 md:pt-0 md:border-0" id="ulMenu">
+<li class="group transition duration-300">
+<a class="font-signika text-2xl tap-highlight-transparent" href="index.html">PORTFOLIO
                 <span class="hidden md:block h-0.5 bg-black dark:bg-white"></span>
-              </a>
-            </li>
-            <li class="group transition duration-300">
-              <a href="dist/about_me.html" class="font-signika text-2xl tap-highlight-transparent">ABOUT ME
-                <span
-                  class="hidden md:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white"></span>
-              </a>
-            </li>
-            <!-- <li class="group transition duration-300">
+</a>
+</li>
+<li class="group transition duration-300">
+<a class="font-signika text-2xl tap-highlight-transparent" href="dist/about_me.html">ABOUT ME
+                <span class="hidden md:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white"></span>
+</a>
+</li>
+<!-- <li class="group transition duration-300">
               <a href="dist/contact.html" class="font-signika text-2xl tap-highlight-transparent">CONTACT
                 <span
                   class="hidden md:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white"></span>
               </a>
             </li> -->
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </header>
-  <!-- Content -->
-  <div class="container mx-auto">
-    <h1 class="text-4xl pt-10 pb-8 font-bold">PORTFOLIO</h1>
-    <section class="text-neutral-700">
-      <div class="container w-full">
-        <div class="flex flex-wrap w-full">
-
-          <!-- part 1 -->
-          <div class="flex w-full md:w-1/2 flex-wrap">
-
-            <div class="w-full p-1">
-              <div class="overflow-hidden h-full w-full">
-                <a href="https://images.unsplash.com/photo-1743612458160-151e94c1583b?q=80&w=2950&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  data-fancybox="gallery">
-                  <img alt="a man standing on a beach next to the ocean"
-                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
-                    src="https://images.unsplash.com/photo-1743612458160-151e94c1583b?q=80&w=2950&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
-                </a>
-              </div>
-            </div>
-
-            <div class="w-full md:w-1/2 p-1">
-              <div class="overflow-hidden h-full w-full">
-                <a href="https://images.unsplash.com/photo-1743612449008-86930da945e0?q=80&w=2932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  data-fancybox="gallery">
-                  <img alt="a man standing on a beach next to the ocean"
-                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
-                    src="https://images.unsplash.com/photo-1743612449008-86930da945e0?q=80&w=2932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
-                </a>
-              </div>
-            </div>
-            <div class="w-full md:w-1/2 p-1">
-              <div class="overflow-hidden h-full w-full">
-                <a href="https://images.unsplash.com/photo-1743612458236-c4b45bbb4c55?q=80&w=2950&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  data-fancybox="gallery">
-                  <img alt="a man standing on a beach next to the ocean"
-                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
-                    src="https://images.unsplash.com/photo-1743612458236-c4b45bbb4c55?q=80&w=2950&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
-                </a>
-              </div>
-            </div>
-          </div>
-
-          
-
-          <!-- part 2 -->
-          <div class="flex w-full md:w-1/2 flex-wrap">
-            <div class="w-full p-1">
-              <div class="overflow-hidden h-full w-full">
-                <a href="https://images.unsplash.com/photo-1743431182424-0d45c6b884ba?q=80&w=2874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  data-fancybox="gallery">
-                  <img alt="a snow covered mountain with trees on the side"
-                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
-                    src="https://images.unsplash.com/photo-1743431182424-0d45c6b884ba?q=80&w=2874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
-                </a>
-              </div>
-            </div>
-            <div class="w-full md:w-1/1 p-1">
-              <div class="overflow-hidden h-full w-full">
-                <a href="https://images.unsplash.com/photo-1743431290639-154ed2efe597?q=80&w=2874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  data-fancybox="gallery">
-                  <img alt="a man standing on a beach next to the ocean"
-                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
-                    src="https://images.unsplash.com/photo-1743431290639-154ed2efe597?q=80&w=2874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
-                </a>
-              </div>
-            </div>
-            
-          </div>
-
-          <!-- part 3 -->
-          <div class="flex w-full md:w-1/2 flex-wrap">
-            <div class="w-full md:w-1/2 p-1">
-              <div class="overflow-hidden h-full w-full">
-                <a href="https://images.unsplash.com/photo-1743431167994-da753eda0dea?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  data-fancybox="gallery">
-                  <img alt="a person standing in front of a rock formation"
-                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
-                    src="https://images.unsplash.com/photo-1743431167994-da753eda0dea?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
-                </a>
-              </div>
-            </div>
-            <div class="w-full md:w-1/2 p-1">
-              <div class="overflow-hidden h-full w-full">
-                <a href="https://images.unsplash.com/photo-1743431168020-41412047df8e?q=80&w=2960&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  data-fancybox="gallery">
-                  <img alt="a cat laying on top of a sidewalk next to the ocean"
-                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
-                    src="https://images.unsplash.com/photo-1743431168020-41412047df8e?q=80&w=2960&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
-                </a>
-              </div>
-            </div>
-            
-            <div class="w-full md:w-1/2 p-1">
-              <div class="overflow-hidden h-full w-full">
-                <a href="https://images.unsplash.com/photo-1743431168209-1b83edaa894b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  data-fancybox="gallery">
-                  <img alt="a branch of a plant floating in a body of water"
-                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
-                    src="https://images.unsplash.com/photo-1743431168209-1b83edaa894b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
-                </a>
-              </div>
-            </div>
-
-            <div class="w-full md:w-1/2 p-1">
-              <div class="overflow-hidden h-full w-full">
-                <a href="https://images.unsplash.com/photo-1743431168231-cb70c9ce4123?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  data-fancybox="gallery">
-                  <img alt="a blue sky with a lot of red and orange clouds"
-                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
-                    src="https://images.unsplash.com/photo-1743431168231-cb70c9ce4123?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- part 4 -->
-          <div class="flex w-full md:w-1/2 flex-wrap">
-
-            <div class="w-full p-1">
-              <div class="overflow-hidden h-full w-full">
-                <a href="https://images.unsplash.com/photo-1743662300117-cab323dc1cdc?q=80&w=5340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  data-fancybox="gallery">
-                  <img alt="a man standing on a beach next to the ocean"
-                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
-                    src="https://images.unsplash.com/photo-1743662300117-cab323dc1cdc?q=80&w=5340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
-                </a>
-              </div>
-            </div>
-
-            <div class="w-full md: p-1">
-              <div class="overflow-hidden h-full w-full">
-                <a href="https://images.unsplash.com/photo-1743662300174-08d91678b15b?q=80&w=5340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  data-fancybox="gallery">
-                  <img alt="a man standing on a beach next to the ocean"
-                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
-                    src="https://images.unsplash.com/photo-1743662300174-08d91678b15b?q=80&w=5340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
-                </a>
-              </div>
-            </div>
-            
-          <!-- part 5 -->
-          <div class="flex w-full md: flex-wrap">
-
-            <div class="w-full p-1">
-              <div class="overflow-hidden h-full w-full">
-                <a href="https://images.unsplash.com/photo-1743672198904-f18754f5f8d2?q=80&w=2945&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  data-fancybox="gallery">
-                  <img alt="a man standing on a beach next to the ocean"
-                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
-                    src="https://images.unsplash.com/photo-1743672198904-f18754f5f8d2?q=80&w=2945&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
-                </a>
-              </div>
-            </div>
-
-            <div class="w-full md: p-1">
-              <div class="overflow-hidden h-full w-full">
-                <a href="https://images.unsplash.com/photo-1743672959940-c0eaf118d96f?q=80&w=2793&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  data-fancybox="gallery">
-                  <img alt="a man standing on a beach next to the ocean"
-                    class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
-                    src="https://images.unsplash.com/photo-1743672959940-c0eaf118d96f?q=80&w=2793&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
-                </a>
-              </div>
-            </div>
-
-            <!-- part 6 -->
-            <div class="flex w-full md:w-1/2 flex-wrap">
-              <div class="w-full md:w-1/2 p-1">
-                <div class="overflow-hidden h-full w-full">
-                  <a href="https://images.unsplash.com/photo-1743431168296-5269fffaa214?q=80&w=4142&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    data-fancybox="gallery">
-                    <img alt="a person standing in front of a rock formation"
-                      class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
-                      src="https://images.unsplash.com/photo-1743431168296-5269fffaa214?q=80&w=4142&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
-                  </a>
-                </div>
-              </div>
-              <div class="w-full md:w-1/2 p-1">
-                <div class="overflow-hidden h-full w-full">
-                  <a href="https://images.unsplash.com/photo-1743431348692-730c3cbf2cca?q=80&w=3971&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    data-fancybox="gallery">
-                    <img alt="a cat laying on top of a sidewalk next to the ocean"
-                      class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
-                      src="https://images.unsplash.com/photo-1743431348692-730c3cbf2cca?q=80&w=3971&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
-                  </a>
-                </div>
-              </div>
-              
-              <div class="w-full md:w-1/2 p-1">
-                <div class="overflow-hidden h-full w-full">
-                  <a href="https://images.unsplash.com/photo-1743431168229-9edb92c0611d?q=80&w=4140&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    data-fancybox="gallery">
-                    <img alt="a branch of a plant floating in a body of water"
-                      class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
-                      src="https://images.unsplash.com/photo-1743431168229-9edb92c0611d?q=80&w=4140&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
-                  </a>
-                </div>
-              </div>
-  
-              <div class="w-full md:w-1/2 p-1">
-                <div class="overflow-hidden h-full w-full">
-                  <a href="https://images.unsplash.com/photo-1743431275096-1242f523408a?q=80&w=4140&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    data-fancybox="gallery">
-                    <img alt="a blue sky with a lot of red and orange clouds"
-                      class="block h-full w-full object-cover object-center opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-110"
-                      src="https://images.unsplash.com/photo-1743431275096-1242f523408a?q=80&w=4140&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
-                  </a>
-                </div>
-              </div>
-            </div>
-
-          
-        </div>
-      </div>
-    </section>
-  </div>
-  <!-- Footer -->
-  <footer>
-    <div class="max-w-screen-xl py-16 mx-auto">
-      <div class="grid grid-cols-1 gap-8 text-center mx-auto">
-        <div>
-          <p class="font-signika"><b>Ji Yishen</b></p>
-          <p class="mt-4 text-sm text-gray-600 dark:text-gray-300">
-            Find me on 小红书: <a href="https://www.xiaohongshu.com/user/profile/615726a4000000000202365d" target="_blank" class="text-gray-600 hover:text-gray-800 dark:text-gray-300 dark:hover:text-gray-100"> Ethan's Archive</a> & 微博: <a href="https://weibo.com/u/5648017806" target="_blank" class="text-gray-600 hover:text-gray-800 dark:text-gray-300 dark:hover:text-gray-100"> 新世纪吸氧战士</a>
-          </p>
-        </div>
-      </div>
-      <!-- <p class="mt-8 text-xs text-gray-600 dark:text-gray-300 text-center">
+</ul>
+</div>
+</div>
+</nav>
+</header>
+<!-- ====================================================================================================================== -->
+<!-- Content -->
+<div class="container mx-auto">
+<h1 class="text-4xl pt-10 pb-8 font-bold">PORTFOLIO</h1>
+<section class="text-neutral-700">
+<div class="container w-full">
+<div class="flex flex-wrap w-full" id="photos_here"><div class="flex w-full p-1 md:w-1/2 flex-wrap overflow-hidden"><a data-fancybox="gallery" href="https://images.unsplash.com/photo-1751702890765-ffda0449b092?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"><img class="block w-full object-cover object-center aspect-[3/2] opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-105" src="https://images.unsplash.com/photo-1751702890765-ffda0449b092?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/></a></div><div class="flex w-full p-1 md:w-1/2 flex-wrap overflow-hidden"><a data-fancybox="gallery" href="https://images.unsplash.com/photo-1751702890811-bd48202b8452?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"><img class="block w-full object-cover object-center aspect-[3/2] opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-105" src="https://images.unsplash.com/photo-1751702890811-bd48202b8452?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/></a></div><div class="flex w-full p-1 md:w-1/2 flex-wrap overflow-hidden"><a data-fancybox="gallery" href="https://images.unsplash.com/photo-1751702890804-794e01e939f5?q=80&amp;w=987&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"><img class="block w-full object-cover object-center aspect-[3/2] opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-105" src="https://images.unsplash.com/photo-1751702890804-794e01e939f5?q=80&amp;w=987&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/></a></div><div class="flex w-full p-1 md:w-1/2 flex-wrap overflow-hidden"><a data-fancybox="gallery" href="https://images.unsplash.com/photo-1751702890768-530b8e731ee3?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"><img class="block w-full object-cover object-center aspect-[3/2] opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-105" src="https://images.unsplash.com/photo-1751702890768-530b8e731ee3?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/></a></div><div class="flex w-full p-1 md:w-1/2 flex-wrap overflow-hidden"><a data-fancybox="gallery" href="https://images.unsplash.com/photo-1751702890841-67e34cb7b140?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"><img class="block w-full object-cover object-center aspect-[3/2] opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-105" src="https://images.unsplash.com/photo-1751702890841-67e34cb7b140?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/></a></div><div class="flex w-full p-1 md:w-1/2 flex-wrap overflow-hidden"><a data-fancybox="gallery" href="https://images.unsplash.com/photo-1743672959940-c0eaf118d96f?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"><img class="block w-full object-cover object-center aspect-[3/2] opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-105" src="https://images.unsplash.com/photo-1743672959940-c0eaf118d96f?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/></a></div><div class="flex w-full p-1 md:w-1/2 flex-wrap overflow-hidden"><a data-fancybox="gallery" href="https://images.unsplash.com/photo-1743662774923-526929252b8e?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"><img class="block w-full object-cover object-center aspect-[3/2] opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-105" src="https://images.unsplash.com/photo-1743662774923-526929252b8e?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/></a></div><div class="flex w-full p-1 md:w-1/2 flex-wrap overflow-hidden"><a data-fancybox="gallery" href="https://images.unsplash.com/photo-1743662300174-08d91678b15b?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"><img class="block w-full object-cover object-center aspect-[3/2] opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-105" src="https://images.unsplash.com/photo-1743662300174-08d91678b15b?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/></a></div><div class="flex w-full p-1 md:w-1/2 flex-wrap overflow-hidden"><a data-fancybox="gallery" href="https://images.unsplash.com/photo-1743672198904-f18754f5f8d2?q=80&amp;w=2071&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"><img class="block w-full object-cover object-center aspect-[3/2] opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-105" src="https://images.unsplash.com/photo-1743672198904-f18754f5f8d2?q=80&amp;w=2071&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/></a></div><div class="flex w-full p-1 md:w-1/2 flex-wrap overflow-hidden"><a data-fancybox="gallery" href="https://images.unsplash.com/photo-1743662774923-526929252b8e?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"><img class="block w-full object-cover object-center aspect-[3/2] opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-105" src="https://images.unsplash.com/photo-1743662774923-526929252b8e?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/></a></div><div class="flex w-full p-1 md:w-1/2 flex-wrap overflow-hidden"><a data-fancybox="gallery" href="https://images.unsplash.com/photo-1743662300117-cab323dc1cdc?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"><img class="block w-full object-cover object-center aspect-[3/2] opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-105" src="https://images.unsplash.com/photo-1743662300117-cab323dc1cdc?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/></a></div><div class="flex w-full p-1 md:w-1/2 flex-wrap overflow-hidden"><a data-fancybox="gallery" href="https://images.unsplash.com/photo-1743612458236-c4b45bbb4c55?q=80&amp;w=2075&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"><img class="block w-full object-cover object-center aspect-[3/2] opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-105" src="https://images.unsplash.com/photo-1743612458236-c4b45bbb4c55?q=80&amp;w=2075&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/></a></div><div class="flex w-full p-1 md:w-1/2 flex-wrap overflow-hidden"><a data-fancybox="gallery" href="https://images.unsplash.com/photo-1743612449008-86930da945e0?q=80&amp;w=2066&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"><img class="block w-full object-cover object-center aspect-[3/2] opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-105" src="https://images.unsplash.com/photo-1743612449008-86930da945e0?q=80&amp;w=2066&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/></a></div><div class="flex w-full p-1 md:w-1/2 flex-wrap overflow-hidden"><a data-fancybox="gallery" href="https://images.unsplash.com/photo-1743612458160-151e94c1583b?q=80&amp;w=2075&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"><img class="block w-full object-cover object-center aspect-[3/2] opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-105" src="https://images.unsplash.com/photo-1743612458160-151e94c1583b?q=80&amp;w=2075&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/></a></div><div class="flex w-full p-1 md:w-1/2 flex-wrap overflow-hidden"><a data-fancybox="gallery" href="https://images.unsplash.com/photo-1743431167994-da753eda0dea?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"><img class="block w-full object-cover object-center aspect-[3/2] opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-105" src="https://images.unsplash.com/photo-1743431167994-da753eda0dea?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/></a></div><div class="flex w-full p-1 md:w-1/2 flex-wrap overflow-hidden"><a data-fancybox="gallery" href="https://images.unsplash.com/photo-1743431168229-9edb92c0611d?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"><img class="block w-full object-cover object-center aspect-[3/2] opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-105" src="https://images.unsplash.com/photo-1743431168229-9edb92c0611d?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/></a></div><div class="flex w-full p-1 md:w-1/2 flex-wrap overflow-hidden"><a data-fancybox="gallery" href="https://images.unsplash.com/photo-1743431275096-1242f523408a?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"><img class="block w-full object-cover object-center aspect-[3/2] opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-105" src="https://images.unsplash.com/photo-1743431275096-1242f523408a?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/></a></div><div class="flex w-full p-1 md:w-1/2 flex-wrap overflow-hidden"><a data-fancybox="gallery" href="https://images.unsplash.com/photo-1743431182424-0d45c6b884ba?q=80&amp;w=1974&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"><img class="block w-full object-cover object-center aspect-[3/2] opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-105" src="https://images.unsplash.com/photo-1743431182424-0d45c6b884ba?q=80&amp;w=1974&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/></a></div><div class="flex w-full p-1 md:w-1/2 flex-wrap overflow-hidden"><a data-fancybox="gallery" href="https://images.unsplash.com/photo-1743431168209-1b83edaa894b?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"><img class="block w-full object-cover object-center aspect-[3/2] opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-105" src="https://images.unsplash.com/photo-1743431168209-1b83edaa894b?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/></a></div><div class="flex w-full p-1 md:w-1/2 flex-wrap overflow-hidden"><a data-fancybox="gallery" href="https://images.unsplash.com/photo-1743431290639-154ed2efe597?q=80&amp;w=2874&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"><img class="block w-full object-cover object-center aspect-[3/2] opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-105" src="https://images.unsplash.com/photo-1743431290639-154ed2efe597?q=80&amp;w=2874&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/></a></div><div class="flex w-full p-1 md:w-1/2 flex-wrap overflow-hidden"><a data-fancybox="gallery" href="https://images.unsplash.com/photo-1743431348692-730c3cbf2cca?q=80&amp;w=2071&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"><img class="block w-full object-cover object-center aspect-[3/2] opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-105" src="https://images.unsplash.com/photo-1743431348692-730c3cbf2cca?q=80&amp;w=2071&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/></a></div><div class="flex w-full p-1 md:w-1/2 flex-wrap overflow-hidden"><a data-fancybox="gallery" href="https://images.unsplash.com/photo-1743431168231-cb70c9ce4123?q=80&amp;w=987&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"><img class="block w-full object-cover object-center aspect-[3/2] opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-105" src="https://images.unsplash.com/photo-1743431168231-cb70c9ce4123?q=80&amp;w=987&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/></a></div><div class="flex w-full p-1 md:w-1/2 flex-wrap overflow-hidden"><a data-fancybox="gallery" href="https://images.unsplash.com/photo-1743431168020-41412047df8e?q=80&amp;w=1480&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"><img class="block w-full object-cover object-center aspect-[3/2] opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-105" src="https://images.unsplash.com/photo-1743431168020-41412047df8e?q=80&amp;w=1480&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/></a></div><div class="flex w-full p-1 md:w-1/2 flex-wrap overflow-hidden"><a data-fancybox="gallery" href="https://images.unsplash.com/photo-1743431168296-5269fffaa214?q=80&amp;w=2071&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"><img class="block w-full object-cover object-center aspect-[3/2] opacity-0 animate-fade-in transition duration-500 transform scale-100 hover:scale-105" src="https://images.unsplash.com/photo-1743431168296-5269fffaa214?q=80&amp;w=2071&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/></a></div></div>
+</div>
+</section>
+</div>
+<!-- ====================================================================================================================== -->
+<!-- Footer -->
+<footer>
+<div class="max-w-screen-xl py-16 mx-auto">
+<div class="grid grid-cols-1 gap-8 text-center mx-auto">
+<div>
+<p class="font-signika"><b>Ji Yishen</b></p>
+<p class="mt-4 text-sm text-gray-600 dark:text-gray-300">
+            Find me on 小红书: <a class="text-gray-600 hover:text-gray-800 dark:text-gray-300 dark:hover:text-gray-100" href="https://www.xiaohongshu.com/user/profile/615726a4000000000202365d" target="_blank"> Ethan's Archive</a> &amp; 微博: <a class="text-gray-600 hover:text-gray-800 dark:text-gray-300 dark:hover:text-gray-100" href="https://weibo.com/u/5648017806" target="_blank"> 新世纪吸氧战士</a>
+</p>
+</div>
+</div>
+<!-- <p class="mt-8 text-xs text-gray-600 dark:text-gray-300 text-center">
         © 2023 Developed and Designed by
         <a href="https://www.linkedin.com/in/joão-franco-452161195/" class="underline">João Franco</a>
       </p> -->
-    </div>
-  </footer>
-  <!-- Script for the LightBox -->
-  <script>
+</div>
+</footer>
+<!-- Script for the LightBox -->
+<script>
     Fancybox.bind("[data-fancybox]", {});
   </script>
-  <script src="dist/fade_in.js"></script>
-  <script src="dist/menu.js"></script>
+<script src="dist/fade_in.js"></script>
+<script src="dist/menu.js"></script>
 </body>
-
 </html>
