@@ -43,7 +43,7 @@ def update_photo_gallery(json_file, html_file):
     # 添加新的图片元素
     for img_url in photo_links:
         photo_html = soup.new_tag("div", attrs={
-            "class": "flex w-full p-8 md:w-1/2 flex-wrap overflow-hidden"
+            "class": "flex w-full p-5 md:w-1/2 flex-wrap overflow-hidden"
         })
 
         a_tag = soup.new_tag("a", href=img_url)
