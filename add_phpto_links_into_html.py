@@ -55,6 +55,7 @@ def update_photo_gallery(json_file, html_file):
             "opacity-0 animate-fade-in transition duration-500 "
             "transform scale-100 hover:scale-105"
         )
+        img_tag.attrs["loading"] = "lazy"
 
         # 组合标签结构
         a_tag.append(img_tag)
