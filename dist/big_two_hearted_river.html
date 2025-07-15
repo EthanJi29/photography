@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="scroll-smooth">
+
+<head>
+  <meta charset="utf-8"/>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Ji Yishen</title>
+  <meta content="Hello there, I'm Ji Yishen – an intrepid explorer through the lens, on a relentless quest to capture the world's boundless wonders. Join me in unraveling the extraordinary through my lens as I embark on a visual journey like no other." name="description"/>
+  <!-- Favicon -->
+  <link href="./assets/favicon.ico" rel="icon" type="image/x-icon"/>
+  <link href="output.css" rel="stylesheet"/>
+  <!-- <link href="styles.css" rel="stylesheet"/> -->
+  <!-- Alpine.js -->
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <!-- Start - Fonts -->
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Signika:wght@400;700&display=swap" rel="stylesheet"/>
+  <!-- End - Fonts -->
+  <!-- Start - Fancybox Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" rel="stylesheet"/>
+  <script crossorigin="anonymous" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+  <!-- End - Fancybox Scripts -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      content: ["./dist/*.{html,js}"],
+      theme: {
+        extend: {
+          fontFamily: {
+            'nothingyoucoulddo': ['Nothing You Could Do', 'cursive'],
+            'signika': ['Signika', 'sans-serif'],
+          },
+        },
+      },
+      plugins: [],
+    }
+  </script>
+</head>
+<body class="dark:bg-black bg-white h-screen text-black dark:text-white px-5 md:px-20 opacity-0 animate-fade-in transition duration-500">
+  <!-- Navbar -->
+  <header class="flex w-full overflow-hidden pt-10 pb-1">
+    <nav class="w-full" id="nav" role="navigation" x-data="{ open: false }">
+      <div class="container mx-auto flex flex-wrap items-center md:flex-no-wrap">
+        <div class="mr-4 md:mr-8">
+          <a class="text-2xl font-signika font-bold" href="../index.html">Ji Yishen</a>
+        </div>
+        <div class="ml-auto md:hidden flex items-center justify-start">
+          <button @click="open = !open" class="tap-highlight-transparent text-black dark:text-white w-5 h-5 relative focus:outline-none" onclick="menuToggle()">
+            <span class="sr-only">Open main menu</span>
+            <div class="block w-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+              <span :class="{'rotate-45': open,' -translate-y-1.5': !open }" aria-hidden="true" class="block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out"></span>
+              <span :class="{'opacity-0': open } " aria-hidden="true" class="block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out"></span>
+              <span :class="{'-rotate-45': open, ' translate-y-1.5': !open}" aria-hidden="true" class="block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out"></span>
+            </div>
+          </button>
+        </div>
+        <div class="w-full h-0 transition-all ease-out duration-500 md:transition-none md:w-auto md:flex-grow md:flex md:items-center" id="menu">
+          <ul class="flex flex-col duration-300 ease-out md:space-x-5 sm:transition-none mt-5 md:flex-row md:items-center md:ml-auto md:mt-0 md:pt-0 md:border-0" id="ulMenu">
+            <li class="group transition duration-300">
+              <a class="font-signika text-2xl tap-highlight-transparent" href="../index.html">Photos
+                <span class="hidden md:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white"></span>
+              </a>
+            </li>
+            <li class="group transition duration-300">
+              <a class="font-signika text-2xl tap-highlight-transparent" href="about_me.html">About Me
+                <span class="hidden md:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white"></span>
+              </a>
+            </li>
+            <li class="group transition duration-300">
+              <a href="./big_two_hearted_river.html" class="font-signika text-2xl tap-highlight-transparent">BTHR
+                <span class="hidden md:block h-0.5 bg-black dark:bg-white"></span>
+              </a>
+            </li>
+            <!-- <li class="group transition duration-300">
+              <a href="contact.html" class="font-signika text-2xl tap-highlight-transparent">CONTACT
+                <span class="hidden md:block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black dark:bg-white"></span>
+              </a>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- 主内容区 -->
+  <main class="flex flex-col items-center justify-center min-h-[60vh] py-8">
+    <canvas id="text-canvas"></canvas>
+  </main>
+  <!-- Footer -->
+  <footer>
+    <div class="max-w-screen-xl py-16 mx-auto">
+      <div class="grid grid-cols-1 gap-8 text-center mx-auto">
+        <div>
+          <p class="font-signika"><b>Ji Yishen</b></p>
+          <p class="mt-4 text-sm text-gray-600 dark:text-gray-300">
+            Find me on 小红书: <a class="text-gray-600 hover:text-gray-800 dark:text-gray-300 dark:hover:text-gray-100" href="https://www.xiaohongshu.com/user/profile/615726a4000000000202365d" target="_blank"> Ethan's Archive</a> & 微博: <a class="text-gray-600 hover:text-gray-800 dark:text-gray-300 dark:hover:text-gray-100" href="https://weibo.com/u/5648017806" target="_blank"> 新世纪吸氧战士</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Script for the LightBox -->
+  <script>
+    // 读取小说内容（此处用 fetch 方式，实际部署时需同源或本地环境）
+    fetch('./big_two_hearted_river.txt')
+      .then(res => res.text())
+      .then(novelText => {
+        // 提取所有汉字
+        const hanzi = novelText.match(/[\u4e00-\u9fa5]/g).join('');
+        window.hanziSource = hanzi;
+        layoutChars();
+        draw();
+      });
+
+    const canvas = document.getElementById('text-canvas');
+    const ctx = canvas.getContext('2d');
+    // 让 canvas 尺寸等于窗口尺寸，并适配高分屏
+    function resizeCanvas() {
+      const dpr = window.devicePixelRatio || 1;
+      canvas.width = window.innerWidth * dpr;
+      canvas.height = window.innerHeight * dpr;
+      canvas.style.width = window.innerWidth + 'px';
+      canvas.style.height = window.innerHeight + 'px';
+      ctx.setTransform(1, 0, 0, 1, 0, 0); // 重置变换
+      ctx.scale(dpr, dpr);
+    }
+    resizeCanvas();
+    window.addEventListener('resize', () => {
+      resizeCanvas();
+      layoutChars();
+      draw();
+    });
+
+    const fontSize = 28;
+    const lineHeight = fontSize * 1.2;
+    let chars = [];
+    let text = '';
+
+    function layoutChars() {
+      chars = [];
+      // 计算每行能放多少字、多少行
+      const charsPerLine = Math.ceil(canvas.width / fontSize);
+      const lines = Math.ceil(canvas.height / lineHeight);
+      const totalChars = charsPerLine * lines;
+      // 用小说汉字填充
+      const hanzi = window.hanziSource || '';
+      if (!hanzi) return;
+      text = '';
+      for (let i = 0; i < totalChars; i++) {
+        text += hanzi[i % hanzi.length];
+      }
+      for (let i = 0; i < text.length; i++) {
+        const line = Math.floor(i / charsPerLine);
+        const col = i % charsPerLine;
+        chars.push({
+          char: text[i],
+          x: col * fontSize,
+          y: line * lineHeight,
+          origX: col * fontSize,
+          origY: line * lineHeight
+        });
+      }
+    }
+
+    let mouse = { x: -1000, y: -1000 };
+    const vacuumRadius = 80;
+    const repelStrength = 1.2;
+
+    window.addEventListener('mousemove', e => {
+      const rect = canvas.getBoundingClientRect();
+      mouse.x = e.clientX - rect.left;
+      mouse.y = e.clientY - rect.top;
+      draw();
+    });
+    window.addEventListener('mouseleave', () => {
+      mouse.x = -1000;
+      mouse.y = -1000;
+      draw();
+    });
+
+    function draw() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.font = fontSize + 'px "Signika", "Nothing You Could Do", serif';
+      ctx.textBaseline = 'top';
+      ctx.fillStyle = '#fff';
+      // 排斥参数
+      const repelRadius = 1500;
+      const repelStrength = 100;
+      // 先计算所有字的新位置
+      let positions = [];
+      for (let i = 0; i < chars.length; i++) {
+        let { origX, origY } = chars[i];
+        let dx = origX + fontSize / 2 - mouse.x;
+        let dy = origY + fontSize / 2 - mouse.y;
+        let dist = Math.sqrt(dx * dx + dy * dy);
+        let x = origX, y = origY;
+        if (dist < repelRadius) {
+          // 距离越近，排斥越大，线性衰减
+          let force = (1 - dist / repelRadius);
+          let repel = repelStrength * force;
+          let angle = Math.atan2(dy, dx);
+          x = origX + Math.cos(angle) * repel;
+          y = origY + Math.sin(angle) * repel;
+        }
+        positions.push({ x, y });
+      }
+      // 绘制文字
+      for (let i = 0; i < chars.length; i++) {
+        ctx.fillText(chars[i].char, positions[i].x, positions[i].y);
+      }
+    }
+
+    draw();
+  </script>
+  <script src="fade_in.js"></script>
+  <script src="menu.js"></script>
+</body>
+</html> 
