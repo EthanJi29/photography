@@ -1,6 +1,7 @@
 import json
 from bs4 import BeautifulSoup
 import os
+import glob
 
 def update_photo_gallery(json_file, html_file):
     """
@@ -16,11 +17,18 @@ def update_photo_gallery(json_file, html_file):
         with open(json_file, 'r', encoding='utf-8') as f:
             data = json.load(f)
         photo_links = data.get('main_page', [])
-        if not photo_links:
-            print("JSON文件中未找到照片链接")
-            return
     except Exception as e:
         print(f"读取JSON文件时出错: {e}")
+        photo_links = []
+
+    # 读取 ./photos 目录下的图片文件
+    photo_dir = "./photos"
+    if os.path.exists(photo_dir):
+        photo_links.extend([os.path.join(photo_dir, f) for f in os.listdir(photo_dir) 
+                          if f.lower().endswith(('.jpg', '.jpeg', '.png', '.gif'))])
+
+    if not photo_links:
+        print("未找到任何照片链接")
         return
 
     # 解析 HTML 文件
